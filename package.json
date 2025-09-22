@@ -2,6 +2,7 @@
   "name": "debabs-charity",
   "version": "0.1.0",
   "private": true,
+  "description": "Modern charity website with Apple-inspired design",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
