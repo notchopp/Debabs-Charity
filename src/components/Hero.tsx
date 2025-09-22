@@ -3,10 +3,8 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Heart, Users, Package, MapPin } from 'lucide-react'
 import Link from 'next/link'
-import { useScrollTriggers } from '@/hooks/useDebabsTriggers'
 
 export default function Hero() {
-  const { scrollY } = useScrollTriggers()
 
   const stats = [
     { icon: Users, value: '500+', label: 'Families Helped' },

@@ -1,8 +1,9 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { Package, Calendar, MapPin } from 'lucide-react'
+import Image from 'next/image'
 import { supabase, Item } from '@/lib/supabase'
 
 export default function ItemsPage() {
@@ -44,7 +45,7 @@ export default function ItemsPage() {
     }
   }
 
-  const filterItems = () => {
+  const filterItems = useCallback(() => {
     let filtered = [...items]
 
     // Search filter
@@ -71,11 +72,11 @@ export default function ItemsPage() {
     }
 
     setFilteredItems(filtered)
-  }
+  }, [items, filters])
 
-  const handleFilterChange = (newFilters: typeof filters) => {
-    setFilters(newFilters)
-  }
+  useEffect(() => {
+    filterItems()
+  }, [filterItems])
 
   if (loading) {
     return (
@@ -198,10 +199,11 @@ export default function ItemsPage() {
                 {/* Image */}
                 <div className="relative h-48 mb-4 rounded-xl overflow-hidden bg-neutral-100">
                   {item.image_url ? (
-                    <img
+                    <Image
                       src={item.image_url}
                       alt={item.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-neutral-400">

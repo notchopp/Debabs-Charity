@@ -175,10 +175,10 @@ export default function DonatePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
             Donate an Item
           </h1>
-          <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-            Help your community by donating items you no longer need. 
-            Every donation makes a difference in someone's life.
-          </p>
+            <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
+              Help your community by donating items you no longer need. 
+              Every donation makes a difference in someone&apos;s life.
+            </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">

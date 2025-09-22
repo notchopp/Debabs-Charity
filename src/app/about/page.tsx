@@ -68,10 +68,10 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
             About DeBabs
           </h1>
-          <p className="text-xl text-neutral-500 max-w-3xl mx-auto leading-relaxed">
-            We're on a mission to make generosity effortless by connecting communities 
-            through meaningful donations and building stronger neighborhoods together.
-          </p>
+            <p className="text-xl text-neutral-500 max-w-3xl mx-auto leading-relaxed">
+              We&apos;re on a mission to make generosity effortless by connecting communities 
+              through meaningful donations and building stronger neighborhoods together.
+            </p>
         </motion.div>
 
         {/* Mission Section */}
@@ -86,17 +86,17 @@ export default function AboutPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
                 Our Mission
               </h2>
-              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                DeBabs was born from a simple idea: what if we could make it easier 
-                for people to help each other? We believe that everyone has something 
-                to give, and everyone has something they need.
-              </p>
-              <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
-                By creating a platform that connects donors with recipients in their 
-                local communities, we're not just facilitating transactions – we're 
-                building bridges between neighbors and strengthening the social fabric 
-                of our communities.
-              </p>
+                <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
+                  DeBabs was born from a simple idea: what if we could make it easier 
+                  for people to help each other? We believe that everyone has something 
+                  to give, and everyone has something they need.
+                </p>
+                <p className="text-lg text-neutral-600 mb-8 leading-relaxed">
+                  By creating a platform that connects donors with recipients in their 
+                  local communities, we&apos;re not just facilitating transactions – we&apos;re 
+                  building bridges between neighbors and strengthening the social fabric 
+                  of our communities.
+                </p>
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center">
                   <Target className="text-accent" size={32} />
@@ -245,10 +245,10 @@ export default function AboutPage() {
           <h2 className="text-3xl font-bold text-secondary mb-6">
             Join Our Mission
           </h2>
-          <p className="text-xl text-neutral-500 mb-8 max-w-2xl mx-auto">
-            Be part of the movement that's making generosity effortless and 
-            communities stronger, one donation at a time.
-          </p>
+            <p className="text-xl text-neutral-500 mb-8 max-w-2xl mx-auto">
+              Be part of the movement that&apos;s making generosity effortless and 
+              communities stronger, one donation at a time.
+            </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
               href="/donate"

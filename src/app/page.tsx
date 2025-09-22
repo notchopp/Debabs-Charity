@@ -106,7 +106,7 @@ export default function HomePage() {
               Our Impact
             </h2>
             <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-              Together, we're making a real difference in communities across the region
+              Together, we&apos;re making a real difference in communities across the region
             </p>
           </motion.div>
 

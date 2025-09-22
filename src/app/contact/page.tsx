@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 
 export default function ContactPage() {
@@ -88,10 +88,10 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-6xl font-bold text-secondary mb-6">
             Get in Touch
           </h1>
-          <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
-            Have questions, suggestions, or want to get involved? 
-            We'd love to hear from you!
-          </p>
+            <p className="text-xl text-neutral-500 max-w-3xl mx-auto">
+              Have questions, suggestions, or want to get involved? 
+              We&apos;d love to hear from you!
+            </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -149,7 +149,7 @@ export default function ContactPage() {
                   </h4>
                   <p className="text-sm text-neutral-500">
                     Simply fill out our donation form with item details and photos. 
-                    We'll help you connect with community members who need it.
+                    We&apos;ll help you connect with community members who need it.
                   </p>
                 </div>
                 <div>
@@ -197,7 +197,7 @@ export default function ContactPage() {
                     Message Sent!
                   </h3>
                   <p className="text-neutral-500 mb-6">
-                    Thank you for reaching out. We'll get back to you within 24 hours.
+                    Thank you for reaching out. We&apos;ll get back to you within 24 hours.
                   </p>
                   <button
                     onClick={() => setStatus('idle')}

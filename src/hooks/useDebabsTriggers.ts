@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { useTriggerOS } from './useTriggerOS'
 
 // Hook for scroll-based triggers
@@ -75,7 +75,7 @@ export function useLocalItemsTrigger() {
   const { addHotTrigger, removeHotTrigger } = useTriggerOS()
   const [localItemsCount, setLocalItemsCount] = useState(0)
 
-  const checkLocalItems = async () => {
+  const checkLocalItems = useCallback(async () => {
     // In a real implementation, this would check for items in user's area
     // For now, we'll simulate with a random number
     const count = Math.floor(Math.random() * 10)
@@ -86,14 +86,14 @@ export function useLocalItemsTrigger() {
     } else {
       removeHotTrigger('pulse-pickup-filter')
     }
-  }
+  }, [addHotTrigger, removeHotTrigger])
 
   useEffect(() => {
     checkLocalItems()
     // Check periodically
     const interval = setInterval(checkLocalItems, 30000) // Every 30 seconds
     return () => clearInterval(interval)
-  }, [])
+  }, [checkLocalItems])
 
   return { localItemsCount, checkLocalItems }
 }
