@@ -23,10 +23,6 @@ export default function ItemsPage() {
     fetchItems()
   }, [])
 
-  useEffect(() => {
-    filterItems()
-  }, [items, filters])
-
   const fetchItems = async () => {
     try {
       setLoading(true)

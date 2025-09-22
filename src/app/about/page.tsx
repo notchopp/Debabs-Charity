@@ -127,7 +127,7 @@ export default function AboutPage() {
               Our Impact
             </h2>
             <p className="text-neutral-500 max-w-2xl mx-auto">
-              Numbers that show the real difference we're making in communities
+              Numbers that show the real difference we&apos;re making in communities
             </p>
           </div>
           
