@@ -95,7 +95,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4 border border-white/20">
                 <value.icon className="text-white" size={24} />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">

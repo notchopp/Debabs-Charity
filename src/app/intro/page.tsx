@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Heart } from 'lucide-react'
 
 export default function IntroPage() {
   const [showButton, setShowButton] = useState(false)
@@ -21,7 +21,7 @@ export default function IntroPage() {
   }
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-[#00A86B] z-50 flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 bg-gradient-to-br from-[#00A86B] via-[#6B3FA0] to-[#1A4CC7] z-50 flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -51,9 +51,33 @@ export default function IntroPage() {
             delay: 1
           }}
         />
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.4, 1],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
+        {/* Logo Icon */}
+        <motion.div
+          className="mb-8 flex justify-center"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+        >
+          <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30">
+            <Heart className="text-white" size={40} fill="currentColor" />
+          </div>
+        </motion.div>
+
         {/* DeBabs Charity Name */}
         <motion.h1
           className="text-6xl md:text-8xl font-light text-white mb-8 tracking-tight drop-shadow-lg"
@@ -76,7 +100,7 @@ export default function IntroPage() {
           </h2>
         </motion.div>
 
-        {/* Why Section */}
+        {/* Why Section - Charity Focused */}
         <motion.div
           className="mb-16 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
@@ -84,8 +108,8 @@ export default function IntroPage() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light drop-shadow-sm">
-            Connecting communities through meaningful donations. 
-            Find what you need, share what you have, and make a real difference together.
+            Empowering communities through the gift of giving. 
+            Every donation creates hope, every item finds a home, every act of kindness builds a stronger community.
           </p>
         </motion.div>
 

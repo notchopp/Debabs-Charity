@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Package, ArrowRight } from 'lucide-react'
+import { Package, ArrowRight, Heart } from 'lucide-react'
 import Link from 'next/link'
 import ItemCard from '@/components/ItemCard'
 import { Item } from '@/lib/supabaseClient'
@@ -63,9 +63,6 @@ export default function HomePage() {
     <div className="min-h-screen">
       {/* Video Section */}
       <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-[#00A86B]" />
-        
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
@@ -106,14 +103,14 @@ export default function HomePage() {
         >
           <div className="aspect-video bg-white/10 backdrop-blur-md rounded-2xl border-2 border-white/20 flex items-center justify-center shadow-2xl">
             <div className="text-center">
-              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Package className="text-white" size={40} />
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/30">
+                <Heart className="text-white" size={40} fill="currentColor" />
               </div>
               <h2 className="text-3xl md:text-4xl font-light text-white mb-2">
                 About DeBabs Charity
               </h2>
               <p className="text-white/80 text-lg">
-                Video placeholder - Coming soon
+                Video placeholder - Learn how we connect communities through giving
               </p>
             </div>
           </div>
@@ -133,10 +130,10 @@ export default function HomePage() {
           >
             <div>
               <h2 className="text-3xl md:text-4xl font-light text-white mb-2 tracking-tight">
-                Recent Items
+                Recent Donations
               </h2>
               <p className="text-white/80">
-                Latest donations from our community
+                Latest items from our generous community members
               </p>
             </div>
             <Link href="/browse">
@@ -170,4 +167,3 @@ export default function HomePage() {
     </div>
   )
 }
-

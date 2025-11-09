@@ -31,26 +31,26 @@ export default function Sidebar() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-4 left-4 z-50 md:hidden p-2 bg-white/90 backdrop-blur-md rounded-lg shadow-lg"
+        className="fixed top-4 left-4 z-50 md:hidden p-2 bg-white/10 backdrop-blur-md rounded-lg shadow-lg border border-white/20"
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {isOpen ? <X size={24} className="text-white" /> : <Menu size={24} className="text-white" />}
       </button>
 
       {/* Collapse Toggle (Desktop) */}
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className="hidden md:flex fixed left-[200px] top-6 z-40 p-2 bg-white/90 backdrop-blur-md rounded-r-lg shadow-lg border-l border-neutral-200 transition-all"
+        className="hidden md:flex fixed left-[200px] top-6 z-40 p-2 bg-white/10 backdrop-blur-md rounded-r-lg shadow-lg border-l border-white/20 transition-all"
         style={{ left: isCollapsed ? '80px' : '200px' }}
       >
         <ChevronLeft 
           size={20} 
-          className={`transition-transform ${isCollapsed ? 'rotate-180' : ''}`}
+          className={`transition-transform text-white ${isCollapsed ? 'rotate-180' : ''}`}
         />
       </button>
 
-      {/* Sidebar */}
+      {/* Sidebar - Blended into page */}
       <motion.aside
-        className={`fixed left-0 top-0 h-full bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-[#00A86B] z-40 transform transition-all duration-300 shadow-2xl ${
+        className={`fixed left-0 top-0 h-full bg-gradient-to-br from-[#00A86B]/80 via-[#6B3FA0]/80 to-[#1A4CC7]/80 backdrop-blur-xl z-40 transform transition-all duration-300 border-r border-white/10 ${
           isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
         animate={{ width: isCollapsed ? '80px' : '200px' }}
@@ -63,8 +63,8 @@ export default function Sidebar() {
               className="flex items-center space-x-3"
               whileHover={{ scale: 1.05 }}
             >
-              <div className="w-10 h-10 bg-white rounded-xl flex items-center justify-center flex-shrink-0">
-                <Heart className="text-[#1A4CC7]" size={24} fill="currentColor" />
+              <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center flex-shrink-0 border border-white/20">
+                <Heart className="text-white" size={24} fill="currentColor" />
               </div>
               <AnimatePresence>
                 {!isCollapsed && (
@@ -93,10 +93,10 @@ export default function Sidebar() {
                   <motion.div
                     className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all ${
                       isActive
-                        ? 'bg-white/20 backdrop-blur-md text-white'
-                        : 'text-white/80 hover:bg-white/10'
+                        ? 'bg-white/25 backdrop-blur-md text-white shadow-lg'
+                        : 'text-white/80 hover:bg-white/15 backdrop-blur-sm'
                     }`}
-                    whileHover={{ x: 4 }}
+                    whileHover={{ x: 4, scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     title={isCollapsed ? item.label : undefined}
                   >
@@ -123,7 +123,7 @@ export default function Sidebar() {
           <AnimatePresence>
             {!isCollapsed && (
               <motion.div
-                className="pt-6 border-t border-white/20"
+                className="pt-6 border-t border-white/10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}

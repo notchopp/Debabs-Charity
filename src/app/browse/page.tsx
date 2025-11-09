@@ -116,7 +116,7 @@ export default function BrowsePage() {
           Browse All Items
         </h1>
         <p className="text-lg text-white/80 max-w-2xl">
-          Explore all items donated by our community members
+          Explore all items donated by our generous community members
         </p>
       </motion.div>
 
@@ -234,4 +234,3 @@ export default function BrowsePage() {
     </div>
   )
 }
-
