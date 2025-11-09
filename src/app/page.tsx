@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Package, Heart, Search, Filter } from 'lucide-react'
 import Link from 'next/link'
 import ItemCard from '@/components/ItemCard'
