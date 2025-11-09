@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -17,6 +17,14 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isCollapsed, setIsCollapsed] = useState(false)
   const pathname = usePathname()
+
+  // Update main content margin when sidebar collapses
+  useEffect(() => {
+    const mainContent = document.getElementById('main-content')
+    if (mainContent) {
+      mainContent.style.marginLeft = isCollapsed ? '80px' : '200px'
+    }
+  }, [isCollapsed])
 
   return (
     <>

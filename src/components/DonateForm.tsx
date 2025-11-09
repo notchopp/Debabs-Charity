@@ -169,7 +169,7 @@ export default function DonateForm() {
 
       {/* Image Upload */}
       <div>
-        <label htmlFor="image" className="block text-sm font-medium text-secondary mb-2">
+        <label htmlFor="image" className="block text-sm font-medium text-white mb-2">
           Item Image
         </label>
         <div className="space-y-4">
