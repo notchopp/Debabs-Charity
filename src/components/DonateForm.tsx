@@ -175,7 +175,7 @@ export default function DonateForm() {
         <div className="space-y-4">
           {preview && (
             <motion.div
-              className="relative w-full h-64 rounded-lg overflow-hidden border-2 border-neutral-300"
+              className="relative w-full h-64 rounded-xl overflow-hidden border-2 border-white/30"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
             >
