@@ -17,11 +17,11 @@ export default function IntroPage() {
   }, [])
 
   const handleEnter = () => {
-    router.push('/')
+    router.push('/home')
   }
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-white z-50 flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-[#00A86B] z-50 flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -38,7 +38,7 @@ export default function IntroPage() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-[#1A4CC7]/20 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-3xl"
           animate={{
             x: [0, -80, 0],
             y: [0, 60, 0],
@@ -56,7 +56,7 @@ export default function IntroPage() {
       <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
         {/* DeBabs Charity Name */}
         <motion.h1
-          className="text-6xl md:text-8xl font-light text-white mb-8 tracking-tight"
+          className="text-6xl md:text-8xl font-light text-white mb-8 tracking-tight drop-shadow-lg"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -71,7 +71,7 @@ export default function IntroPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h2 className="text-4xl md:text-6xl font-light text-white/90 mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-6xl font-light text-white mb-6 tracking-tight drop-shadow-md">
             Give. Share. Impact.
           </h2>
         </motion.div>
@@ -83,7 +83,7 @@ export default function IntroPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <p className="text-xl md:text-2xl text-white/80 leading-relaxed font-light">
+          <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light drop-shadow-sm">
             Connecting communities through meaningful donations. 
             Find what you need, share what you have, and make a real difference together.
           </p>

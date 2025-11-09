@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="flex min-h-screen bg-gradient-to-br from-[#00A86B]/5 via-[#1A4CC7]/5 to-white">
+        <div className="flex min-h-screen bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-[#00A86B]">
           <Sidebar />
-          <main className="flex-1 md:ml-64 min-h-screen">
+          <main className="flex-1 md:ml-[200px] min-h-screen transition-all duration-300">
             {children}
           </main>
         </div>

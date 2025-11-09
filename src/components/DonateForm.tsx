@@ -119,7 +119,7 @@ export default function DonateForm() {
     >
       {/* Name (Optional) */}
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-secondary mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-white mb-2">
           Your Name (Optional)
         </label>
         <input
@@ -128,15 +128,15 @@ export default function DonateForm() {
           name="name"
           value={formData.name}
           onChange={handleInputChange}
-          className="input-field"
+          className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
           placeholder="John Doe"
         />
       </div>
 
       {/* Item Title */}
       <div>
-        <label htmlFor="title" className="block text-sm font-medium text-secondary mb-2">
-          Item Title <span className="text-error">*</span>
+        <label htmlFor="title" className="block text-sm font-medium text-white mb-2">
+          Item Title <span className="text-red-300">*</span>
         </label>
         <input
           type="text"
@@ -145,15 +145,15 @@ export default function DonateForm() {
           value={formData.title}
           onChange={handleInputChange}
           required
-          className="input-field"
+          className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all"
           placeholder="e.g., Vintage Coffee Table"
         />
       </div>
 
       {/* Description */}
       <div>
-        <label htmlFor="description" className="block text-sm font-medium text-secondary mb-2">
-          Description <span className="text-error">*</span>
+        <label htmlFor="description" className="block text-sm font-medium text-white mb-2">
+          Description <span className="text-red-300">*</span>
         </label>
         <textarea
           id="description"
@@ -162,7 +162,7 @@ export default function DonateForm() {
           onChange={handleInputChange}
           required
           rows={5}
-          className="input-field resize-none"
+          className="w-full px-4 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-white/30 focus:border-white/40 transition-all resize-none"
           placeholder="Describe the item, its condition, and why you're donating it..."
         />
       </div>
@@ -190,22 +190,22 @@ export default function DonateForm() {
                   setPreview(null)
                   setImageFile(null)
                 }}
-                className="absolute top-2 right-2 p-2 bg-white rounded-full shadow-lg hover:bg-neutral-100 transition-colors"
+                className="absolute top-2 right-2 p-2 bg-white/20 backdrop-blur-md rounded-full shadow-lg hover:bg-white/30 transition-colors"
               >
-                <X size={20} className="text-secondary" />
+                <X size={20} className="text-white" />
               </button>
             </motion.div>
           )}
           <label
             htmlFor="image"
-            className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-neutral-300 rounded-lg cursor-pointer hover:border-accent transition-colors bg-neutral-50"
+            className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-white/30 rounded-xl cursor-pointer hover:border-white/50 transition-colors bg-white/5 backdrop-blur-sm"
           >
             <div className="flex flex-col items-center justify-center pt-5 pb-6">
-              <Upload className="text-neutral-500 mb-2" size={32} />
-              <p className="mb-2 text-sm text-neutral-500">
+              <Upload className="text-white/70 mb-2" size={32} />
+              <p className="mb-2 text-sm text-white/80">
                 <span className="font-semibold">Click to upload</span> or drag and drop
               </p>
-              <p className="text-xs text-neutral-400">PNG, JPG, GIF up to 10MB</p>
+              <p className="text-xs text-white/60">PNG, JPG, GIF up to 10MB</p>
             </div>
             <input
               id="image"
@@ -226,9 +226,9 @@ export default function DonateForm() {
           name="pickup_available"
           checked={formData.pickup_available}
           onChange={handleInputChange}
-          className="w-5 h-5 text-accent border-neutral-300 rounded focus:ring-accent"
+          className="w-5 h-5 text-[#1A4CC7] border-white/30 rounded focus:ring-white/30 bg-white/10"
         />
-        <label htmlFor="pickup_available" className="text-sm font-medium text-secondary">
+        <label htmlFor="pickup_available" className="text-sm font-medium text-white">
           Pickup available for this item
         </label>
       </div>
@@ -237,7 +237,7 @@ export default function DonateForm() {
       <motion.button
         type="submit"
         disabled={isSubmitting || !formData.title || !formData.description}
-        className="btn-primary w-full text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full text-lg py-4 bg-white text-[#1A4CC7] rounded-xl font-medium shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
         whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
         whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
       >
@@ -261,7 +261,7 @@ export default function DonateForm() {
       {/* Status Messages */}
       {submitStatus === 'success' && (
         <motion.div
-          className="p-4 bg-highlight/10 border border-highlight rounded-lg text-highlight"
+          className="p-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-xl text-white"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
@@ -274,7 +274,7 @@ export default function DonateForm() {
 
       {submitStatus === 'error' && (
         <motion.div
-          className="p-4 bg-error/10 border border-error rounded-lg text-error"
+          className="p-4 bg-red-500/20 backdrop-blur-md border border-red-300/30 rounded-xl text-white"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
         >
