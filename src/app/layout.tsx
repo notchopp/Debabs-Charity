@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "DeBabs Charity - Making Generosity Effortless",
@@ -30,9 +31,12 @@ export default function RootLayout({
       <body className="antialiased">
         <div className="flex min-h-screen bg-gradient-to-br from-[#00A86B] via-[#6B3FA0] to-[#1A4CC7]">
           <Sidebar />
-          <main className="flex-1 md:ml-[200px] min-h-screen transition-all duration-300" id="main-content">
-            {children}
-          </main>
+          <div className="flex-1 md:ml-[200px] min-h-screen transition-all duration-300" id="main-content">
+            <Header />
+            <main className="pt-20">
+              {children}
+            </main>
+          </div>
         </div>
       </body>
     </html>
