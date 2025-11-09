@@ -36,9 +36,20 @@ export default function IntroPage() {
             duration: 1,
             ease: "easeOut"
           }}
+          className="mb-8"
         >
           <AnimatedLogo size="lg" />
         </motion.div>
+
+        {/* DeBabs Charity Text */}
+        <motion.h1
+          className="text-5xl md:text-7xl font-bold text-secondary mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >
+          DeBabs Charity
+        </motion.h1>
 
         {/* Button */}
         <AnimatePresence>
@@ -48,18 +59,17 @@ export default function IntroPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-12"
             >
               <motion.button
                 onClick={handleEnter}
-                className="px-8 py-4 bg-gradient-to-r from-highlight to-purple text-white text-lg font-semibold rounded-full shadow-lg"
+                className="px-10 py-5 bg-gradient-to-r from-highlight to-purple text-white text-xl font-semibold rounded-full shadow-lg"
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 168, 107, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                Give Back Now
+                Help Your Neighbor Now
               </motion.button>
             </motion.div>
           )}
@@ -68,4 +78,3 @@ export default function IntroPage() {
     </div>
   )
 }
-
