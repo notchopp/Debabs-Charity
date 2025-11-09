@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Package, Search, Filter, MapPin } from 'lucide-react'
+import { Package, Search, Filter, MapPin, Heart } from 'lucide-react'
 import Link from 'next/link'
 import ItemCard from '@/components/ItemCard'
 import { Item } from '@/lib/supabaseClient'
