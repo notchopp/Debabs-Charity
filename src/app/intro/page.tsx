@@ -23,7 +23,7 @@ export default function IntroPage() {
   }
 
   return (
-    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-gradient-to-br from-[#00A86B] via-[#1A4CC7] to-white z-50 flex items-center justify-center">
       <div className="text-center">
         {/* Logo Animation */}
         <motion.div
@@ -43,7 +43,7 @@ export default function IntroPage() {
 
         {/* DeBabs Charity Text */}
         <motion.h1
-          className="text-5xl md:text-7xl font-bold text-secondary mb-12"
+          className="text-5xl md:text-7xl font-bold text-white mb-12 drop-shadow-lg"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -62,8 +62,8 @@ export default function IntroPage() {
             >
               <motion.button
                 onClick={handleEnter}
-                className="px-10 py-5 bg-gradient-to-r from-highlight to-purple text-white text-xl font-semibold rounded-full shadow-lg"
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(0, 168, 107, 0.3)" }}
+                className="px-10 py-5 bg-white text-[#1A4CC7] text-xl font-semibold rounded-full shadow-2xl hover:shadow-3xl transition-shadow"
+                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(255, 255, 255, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
