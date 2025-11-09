@@ -244,7 +244,7 @@ export default function DonateForm() {
         {isSubmitting ? (
           <span className="flex items-center space-x-2">
             <motion.div
-              className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+              className="w-5 h-5 border-2 border-[#1A4CC7] border-t-transparent rounded-full"
               animate={{ rotate: 360 }}
               transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
             />
